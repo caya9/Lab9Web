@@ -51,11 +51,10 @@ $result = mysqli_query($conn, $query);
             <td><?php echo htmlspecialchars($row['kategori']); ?></td>
             <td>
     <?php if ($gambar != '') { ?>
-        <img src="assets/gambar/<?php echo $gambar; ?>"
-             width="100"
-             height="100"
-             style="object-fit: contain;"
-             alt="Gambar HP">
+        <img src="<?= BASE_URL ?>assets/gambar/<?php echo $gambar; ?>"
+     width="100" height="100"
+     style="object-fit: contain;"
+     alt="Gambar HP">
     <?php } else { ?>
         Tidak ada gambar
     <?php } ?>

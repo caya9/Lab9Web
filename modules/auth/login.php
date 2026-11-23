@@ -1,7 +1,6 @@
 
 <?php
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
 }
 
 $error = '';
@@ -18,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['login'] = true;
         $_SESSION['username'] = $username;
 
-        header("Location: ../../index.php");
-        exit;
+        header("Location: index.php?page=dashboard");
+exit;
 
     } else {
         $error = "Username atau password salah!";
